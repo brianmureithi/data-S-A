@@ -1,4 +1,4 @@
-/* Linked List
+/* Singly Linked List
 
 It is represented by a pointer to the first node in the list. 
 The first node is the head
@@ -7,7 +7,7 @@ The first node is the head
         -Each node contains a data item, and a pointer to the next node*/
 
 //head of the list. 
-
+let head;
     class Node{
       /* A linked list node class */
 
@@ -22,15 +22,19 @@ The first node is the head
       }
 
 
+    }
+
+
       
       /* Inserting a new data item at the begining of a linked list. This node will receive a pointer to the head and change pointer to the new node */
 
-      push = (new_data) =>{
+    function push (new_data){
         /* Creating new node and assigning the value passed as parameter */
 
       let new_node = new Node(new_data)
        new_node.next=head;
-       head=new_data;
+       head=new_node;
+     
 
     }
 
@@ -43,14 +47,14 @@ The first node is the head
            }
 
            let new_node = new Node(new_data);
-           new_node.next = prev_node.next;
+           new_node.next = previous_node.next;
            previous_node.next=new_node;
            
 
 
         }
       
-    }
+    
        /* Method to print all linked list items */
 
         printList =() =>{
@@ -59,6 +63,7 @@ The first node is the head
           console.log(n.data + ' ');
           n=n.next;
         }
+      }
 
 
         /* Function to add a node item at the end of the list */
@@ -72,7 +77,7 @@ The first node is the head
               -If the list is empty the new data will be the new head*/
 
               if(head == null){
-                head = new Node(new_data);
+                head = newNode;
                 /* Isn't it same as newNode? */
               }
                 /* The last node points to null */
@@ -91,18 +96,28 @@ The first node is the head
                 }
 
         }
+      
 
-      }
+  
 
 
     /* Creating a linked list with three items */
-    let head= new Node(1);
+/*     let head= new Node(1);
     let second = new Node(2);
     let third =new Node(3);
 
     head.next=second
     second.next=third
-    third.next=null;
+    third.next=null; */
+
+  
+append(8)
+push(1)
+
+
+
+
+
 
     printList();
     
