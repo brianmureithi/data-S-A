@@ -60,6 +60,38 @@ The first node is the head
           n=n.next;
         }
 
+
+        /* Function to add a node item at the end of the list */
+
+        append = (new_data) => {
+
+          let newNode = new Node(new_data)
+          
+          /* Check if the list is empty by comparing the head to null
+          
+              -If the list is empty the new data will be the new head*/
+
+              if(head == null){
+                head = new Node(new_data);
+                /* Isn't it same as newNode? */
+              }
+                /* The last node points to null */
+                newNode.next = null;
+
+                /* Else traverse to the last node */
+
+                let last = head;
+                while(last.next != null){
+                  last = last.next;
+
+                
+                /*  Change the next of the last node
+                */  last.next =newNode;
+                  return
+                }
+
+        }
+
       }
 
 
