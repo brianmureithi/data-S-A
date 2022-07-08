@@ -57,7 +57,7 @@ let head;
     
        /* Method to print all linked list items */
 
-        printList =() =>{
+        printList = () =>{
         let n = head;
         while(n != null){
           console.log(n.data + ' ');
