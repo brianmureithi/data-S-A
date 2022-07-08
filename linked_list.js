@@ -28,7 +28,7 @@ let head;
       
       /* Inserting a new data item at the begining of a linked list. This node will receive a pointer to the head and change pointer to the new node */
 
-    function push (new_data){
+     push = new_data =>{
         /* Creating new node and assigning the value passed as parameter */
 
       let new_node = new Node(new_data)
@@ -43,7 +43,7 @@ let head;
         insertAfter = (previous_node, new_data) => {
            if(previous_node == null){
             console.log("previous node cannot be null");
-            return /* Stop code flow */
+            return; /* Stop code flow */
            }
 
            let new_node = new Node(new_data);
@@ -96,6 +96,35 @@ let head;
                 }
 
         }
+
+        /* Function to delete the first occurrence of given a key */
+
+
+        deleteNode = (key) => {
+
+          let temp = head, prev =null;
+
+          /* If head contains the key to be deleted */
+
+          while(temp != null && temp.data == key){
+            head = temp.next;
+            return;
+          }
+
+          /* Finding the key to be deleted */
+
+          while(temp != null && temp.data != key){
+            prev = temp;
+            temp = temp.next;
+          }
+  /* If the key was not present */
+          if(temp == null){
+            return;
+          }
+  /* Remove or unlink the node from the list */
+          prev.next = temp.next;
+
+        }
       
 
   
@@ -111,15 +140,15 @@ let head;
     third.next=null; */
 
   
-append(8)
-push(1)
+append([1,2,3])
+push([6,8,10])
+/* push(15)
+append(10)
+push(3)
+push(9)
+insertAfter(head.next,33) */
 
-
-
-
-
-
-    printList();
+  console.log('The resultant singly linked list is '); printList();
     
 
  
