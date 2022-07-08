@@ -1,3 +1,5 @@
+/* 
+*Doubly Linked list */
 let head_ref = null;
 
 
@@ -10,6 +12,11 @@ let head_ref = null;
                 }
 
     }
+
+
+
+
+
 
     push = (new_data) =>{
     
@@ -30,6 +37,10 @@ let head_ref = null;
             /* The head reference is updated for other new elements to use as their  */
             head_ref = new_node;
     }
+
+
+
+
 
     printList = () => {
         var t = head_ref;
@@ -55,6 +66,7 @@ let head_ref = null;
 
         push(5);
         push(6);
+     
         printList();
 
         

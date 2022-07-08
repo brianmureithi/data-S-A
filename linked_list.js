@@ -1,4 +1,5 @@
-/* Singly Linked List
+/* 
+*Singly Linked List
 
 It is represented by a pointer to the first node in the list. 
 The first node is the head
@@ -22,6 +23,7 @@ class Node{
    }
 
 
+
       
       /* Inserting a new data item at the begining of a linked list. This node will receive a pointer to the head and change pointer to the new node */
 
@@ -33,6 +35,9 @@ class Node{
      
 
     }
+
+
+
 
     /* Inserting a node after a given previous node */
 
@@ -47,6 +52,11 @@ class Node{
                   previous_node.next=new_node;
           
         }
+
+
+
+
+
       
     
        /* Method to print all linked list items */
@@ -59,6 +69,10 @@ class Node{
                 n=n.next;
               }
       }
+
+
+
+
 
 
         /* Function to add a node item at the end of the list */
@@ -89,6 +103,9 @@ class Node{
 
    }
 
+
+
+
    /* Function to get the nth item of a list */
 
     getNthItem = (index) =>{
@@ -108,6 +125,28 @@ class Node{
         return 0;
     
     }
+
+
+
+
+        /*  Function to search for number of occurrence in integers example */
+    count = (search_item) => {
+      let current = head;
+      let count = 0;
+
+      while (current != null) {
+          if (current.data == search_item){
+              count++;
+          }
+          current=current.next;
+
+      }
+      console.log('The total count is ' + count);
+
+  }
+
+
+
 
         /* Function to delete the first occurrence of given a key */
 
@@ -148,9 +187,15 @@ class Node{
     third.next=null; */
 
   
-            append([1,2,3])
-            push([6,8,10])
+            append(6)
+            push(5)
+            push(3)
+            push(2)
+            push(3)            
+            push(4)
+            push(2)
             getNthItem(1)
+            count(3)
             /* push(15)
             append(10)
             push(3)
