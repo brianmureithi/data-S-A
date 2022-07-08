@@ -37,12 +37,21 @@ class Node{
 
         printList = () => {
             var t = head_ref;
+            var last = null;
             /* We use head to traverse through linked lists */
-
+            console.log('The doubly linked list in forward traversal')
             while(t !=null){
                 console.log(t.data);
+                last = t;
                t= t.next
              
+            }
+
+            console.log('The doubly linked list in reversal traversal')
+            
+            while(last != null){
+                console.log(last.data);
+                last=last.prev;
             }
 
         }
@@ -51,6 +60,6 @@ class Node{
         push(6);
         printList();
 
-        console.log('The doubly linked list is')
+        
 
    
